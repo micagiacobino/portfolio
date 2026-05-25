@@ -3,161 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Micaela Ailen Pallero Giacobino - Portfolio</title>
+    <title>Micaela Ailen Pallero Giacobino - Brand Manager</title>
     <style>
-        :root {
-            --bg-color: #fcfcfc;
-            --text-main: #1a1a1a;
-            --text-muted: #666666;
-            --accent: #8c7a6b;
-            --border: #eaeaea;
-        }
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: #f7f5f2;
+            color: #1a1a1a;
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
         }
 
         .container {
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 80px 40px;
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            padding: 50px;
+            border: 1px solid #eae6e1;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 40px;
+            align-items: start;
         }
 
         header {
-            margin-bottom: 80px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 40px;
+            margin-bottom: 40px;
         }
 
-        .brand-title {
-            font-size: 14px;
+        .tag {
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-weight: 400;
+            letter-spacing: 2px;
+            color: #8c7a6b;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
         }
 
         h1 {
-            font-size: 38px;
-            font-weight: 300;
-            letter-spacing: -0.02em;
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #111111;
+            margin-bottom: 10px;
             line-height: 1.2;
-            margin-bottom: 24px;
-            max-width: 700px;
         }
 
-        .subtitle {
-            font-size: 18px;
-            color: var(--text-muted);
-            font-weight: 300;
-            max-width: 600px;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 60px;
-        }
-
-        section {
-            padding-top: 20px;
-        }
-
-        h2 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 32px;
-            font-weight: 500;
-        }
-
-        .profile-text {
+        .title-sub {
             font-size: 16px;
-            color: var(--text-main);
-            max-width: 750px;
+            color: #666666;
             font-weight: 300;
         }
 
-        .profile-text p {
+        .bio {
+            font-size: 15px;
+            color: #333333;
+            font-weight: 300;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 5px;
             margin-bottom: 20px;
+            font-weight: 600;
         }
 
-        .experience-item {
-            margin-bottom: 48px;
-            max-width: 750px;
+        .experience-item, .education-item {
+            margin-bottom: 25px;
         }
 
-        .exp-header {
+        .item-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #111111;
+            margin-bottom: 5px;
         }
 
-        .exp-title {
-            font-size: 16px;
+        .item-company {
+            color: #8c7a6b;
             font-weight: 400;
         }
 
-        .exp-meta {
+        .item-date {
+            font-size: 13px;
+            color: #888888;
+            font-weight: 300;
+        }
+
+        .item-desc {
             font-size: 14px;
-            color: var(--text-muted);
+            color: #555555;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .profile-img-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border: 1px solid #eae6e1;
+            padding: 8px;
+            background: #ffffff;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(15%);
+        }
+
+        .info-box {
+            background: #faf9f7;
+            border: 1px solid #eae6e1;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        .info-box h3 {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+            color: #555555;
             font-weight: 300;
         }
 
-        .exp-desc {
-            font-size: 15px;
-            color: var(--text-muted);
-            font-weight: 300;
+        .info-box li strong {
+            color: #111111;
+            font-weight: 400;
         }
 
-        .contact-link {
-            display: inline-block;
-            font-size: 16px;
-            color: var(--text-main);
+        .contact-btn {
+            display: block;
+            text-align: center;
+            background: #1a1a1a;
+            color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px solid var(--text-main);
-            padding-bottom: 20px;
-            font-weight: 300;
-            transition: color 0.2s, border-color 0.2s;
+            padding: 12px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.2s;
         }
 
-        .contact-link:hover {
-            color: var(--accent);
-            border-color: var(--accent);
+        .contact-btn:hover {
+            background: #444444;
         }
 
-        footer {
-            margin-top: 100px;
-            padding-top: 30px;
-            border-top: 1px solid var(--border);
-            font-size: 12px;
-            color: var(--text-muted);
-            letter-spacing: 0.05em;
-        }
-
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 20px 10px;
+            }
             .container {
-                padding: 40px 24px;
+                padding: 25px;
             }
-            h1 {
-                font-size: 28px;
-            }
-            .exp-header {
-                flex-direction: column;
-                gap: 4px;
+            .right-column {
+                order: -1;
             }
         }
     </style>
@@ -165,61 +203,84 @@
 <body>
 
     <div class="container">
-        <header>
-            <div class="brand-title">Brand Management & Strategic Leadership</div>
-            <h1>Micaela Ailen Pallero Giacobino</h1>
-            <div class="subtitle">Especialista en posicionamiento de marca, desarrollo estético y liderazgo estratégico en comercio electrónico y mercados de alta gama.</div>
-        </header>
+        <div class="main-layout">
+            
+            <div class="left-column">
+                <header>
+                    <span class="tag">Brand Manager & Strategic Leadership</span>
+                    <h1>Micaela Ailen Pallero Giacobino</h1>
+                    <div class="title-sub">Especialista en posicionamiento de marca y dirección de identidad visual</div>
+                </header>
 
-        <main class="content-grid">
-            <section id="about">
-                <h2>Perfil Profesional</h2>
-                <div class="profile-text">
-                    <p>Líder estratégica enfocada en la gestión y construcción de marcas con un marcado sentido estético, minimalista y sofisticado. Con sólida experiencia en la dirección de equipos multiculturales y optimización de procesos operativos en corporaciones líderes de tecnología en América Latina, combino una visión analítica del negocio con una profunda sensibilidad por el branding y la identidad visual de alta gama.</p>
-                    <p>Orientada al desarrollo de narrativas de marca consistentes, dirección de arte aplicable a producto y gestión integral de proyectos enfocados en la experiencia del usuario y el posicionamiento premium.</p>
-                </div>
-            </section>
+                <p class="bio">
+                    Profesional estratégica enfocada en la gestión de marcas con una sólida sensibilidad por la estética limpia y sofisticada. Con trayectoria liderando equipos multiculturales y optimizando procesos en el sector tecnológico y de e-commerce a nivel regional, combino el análisis de negocio con la dirección visual para construir narrativas de marca consistentes y de alto valor. Especializada en la curaduría de identidad e implementación estratégica con un enfoque premium.
+                </p>
 
-            <section id="experience">
-                <h2>Experiencia Clave</h2>
-                
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div class="exp-title"><strong>Team Leader - North America Cash Collection</strong></div>
-                        <div class="exp-meta">Mercado Libre | Actualidad</div>
+                <section class="experience">
+                    <div class="section-title">Experiencia Destacada</div>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>Team Leader <span class="item-company">| Mercado Libre</span></div>
+                            <div class="item-date">2024 - Actualidad</div>
+                        </div>
+                        <div class="item-desc">
+                            Liderazgo operativo y gestión estratégica para el mercado de North America dentro del ecosistema SAP Ariba. Conducción de equipos de alto rendimiento y optimización de flujos corporativos clave.
+                        </div>
                     </div>
-                    <div class="exp-desc">Liderazgo operativo y estratégico para el mercado norteamericano dentro del ecosistema SAP Ariba. Gestión de equipos de alta performance y optimización de flujos corporativos de cara al cliente.</div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div class="exp-title"><strong>Consultoría de Branding & Dirección de Identidad</strong></div>
-                        <div class="exp-meta">Proyectos Independientes</div>
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>Consultoría de Branding & Dirección de Identidad</div>
+                            <div class="item-date">Proyectos Seleccionados</div>
+                        </div>
+                        <div class="item-desc">
+                            Desarrollo integral de sistemas de identidad de marca, dirección de arte para packaging y diseño de experiencias digitales con enfoque minimalista y de alta gama.
+                        </div>
                     </div>
-                    <div class="exp-desc">Desarrollo integral de sistemas de identidad visual, estrategias de packaging y líneas de diseño minimalista para marcas emergentes con enfoque de autor y estética curada.</div>
-                </div>
-            </section>
+                </section>
 
-            <section id="education">
-                <h2>Educación y Enfoque</h2>
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <div class="exp-title"><strong>Licenciatura en Comercialización y Publicidad</strong></div>
-                        <div class="exp-meta">UBA / Universidad de Palermo</div>
+                <section class="education">
+                    <div class="section-title">Educación</div>
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>Lic. en Comercialización y Publicidad</div>
+                            <div class="item-date">En Curso</div>
+                        </div>
+                        <div class="item-desc">
+                            Universidad de Buenos Aires (FCE) / Universidad de Palermo. Enfoque en estrategia de mercado, comportamiento del consumidor y gestión visual de marcas de lujo.
+                        </div>
                     </div>
-                    <div class="exp-desc">Formación orientada a la psicología del consumidor, gestión de marcas de lujo, estrategia publicitaria y analítica de mercado.</div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <div class="profile-img-container">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="Micaela Giacobino" class="profile-img">
                 </div>
-            </section>
 
-            <section id="contact">
-                <h2>Contacto</h2>
-                <a href="mailto:tu-email@dominio.com" class="contact-link">Hablemos sobre dirección de marca y estrategia</a>
-            </section>
-        </main>
+                <div class="info-box">
+                    <h3>Core Competencies</h3>
+                    <ul>
+                        <li>• Brand Management</li>
+                        <li>• Dirección de Arte & Estética</li>
+                        <li>• Liderazgo Multicultural</li>
+                        <li>• Estrategia de E-commerce</li>
+                    </ul>
+                </div>
 
-        <footer>
-            &copy; 2026 Micaela Ailen Pallero Giacobino. Todos los derechos reservados. Estética inspirada en el minimalismo de los 90s.
-        </footer>
+                <div class="info-box">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><strong>Ubicación:</strong> Buenos Aires, ARG</li>
+                        <li><strong>Idiomas:</strong> Español (Nativo) / Inglés (Avanzado)</li>
+                    </ul>
+                </div>
+
+                <a href="mailto:tu-email@dominio.com" class="contact-btn">Contacto</a>
+            </div>
+
+        </div>
     </div>
 
 </body>
